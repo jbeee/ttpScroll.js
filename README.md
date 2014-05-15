@@ -1,7 +1,7 @@
 ttpScroll.js
 ============
 ###tweened - touch - parallax - scroll widget 
-DEMO: http:/jbee.io/demos/ttpScroll
+DEMO: http://jbee.io/demos/ttpScroll
 - based on the victoria beckham landrover website https://victoriabeckham.landrover.com/INT
 - but built to function on mobile and with greater cross browser compatibility
 - works with both touch and mousewheel
