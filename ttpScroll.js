@@ -1,3 +1,6 @@
+/// jbee.io
+/// ttpScroll.js
+
 $.fn.ttpScroll = function() {
 var mState = 0;
 var winW = window.innerWidth;
@@ -71,19 +74,21 @@ function pokeIE() {
 }
 
 
+
+
 function ioM()
 {
-
+     usingMouse = true;
 }
 
 function ioT()
 {
-
+     usingMouse = false;
 }
 
 function iomsT()
 {
-
+     usingMouse = false;
 }
 
     var sHHeight; var sBHeight; var sDiff; var sHrPos;
@@ -174,7 +179,7 @@ function iomsT()
         tweenScroll(sPercent);
     }
     function autoTweenScroll(goTo) {
-        sPercent = parseFloat(goTo) / 15;
+        sPercent = parseFloat(goTo) / 15.3;
         sPercent = Math.max(0, Math.min(1, sPercent));
         thrBusy = true;
         if (!scrolling) {
@@ -254,7 +259,7 @@ function iomsT()
         var goTo = $(this).attr('href').replace('#', '');
         autoTweenScroll(goTo);
         if (uBr > 9) {
-            history.pushState('object or string', 'Tweened Scroll', '/jQTests/' + goTo);
+            history.pushState('object or string', 'ttpScroll', 'page' + goTo);
         }
     });
     window.onpopstate = function() {
@@ -265,16 +270,7 @@ function iomsT()
         autoTweenScroll(goTo);
     };
 
-    $('li b').click(function(e) {
-        window.location.href = 'http://www.jbeedev.com/jQTests/tScroll.html';
-
-    });
-
-    var usingMouse = false;
-    if (!usingMouse) {
-        usingMouse = true;
-    }
-
+   
     var mwDistance;
     var maxT;
     var mwDelta = 0;
@@ -472,4 +468,5 @@ function iomsT()
 
 jQuery(function($) {
     $('#scrollContainer').ttpScroll();
+    $('window').followMe3D('shftPos','shft0',false,true,0,0);
 });
